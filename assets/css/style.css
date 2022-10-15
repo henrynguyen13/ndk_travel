@@ -1,0 +1,610 @@
+* { /*Reset*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Common */
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    /* Tự thêm element giả sau row, không cần thêm class clear nữa */
+    content: "";
+    display: block;
+    clear: both;
+}
+.col {
+    float: left;
+    padding: 0 8px;
+}
+
+
+.col-third {
+    width: calc(100%/3);
+}
+
+.col-half {
+    width: 50%;
+}
+
+
+.col-full {
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+.mt-16 {
+    margin-top: 16px !important;
+}
+.mt-32{
+    margin-top: 32px !important;
+}
+
+.mt-47{
+    margin-top: 47px;
+}
+
+.pb-16 {
+    padding-bottom: 16px;
+}
+
+.br-4 {
+    border-radius: 4px;
+}
+.btn {
+    text-decoration: none;
+    background-color: #ffa500;
+    color: #fff;
+    padding: 11px 20px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+}
+
+.gallery-img {
+    width: 100%;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.pull-right {
+    float: right;
+}
+/* Main */
+#main {
+
+}
+
+#header {
+    height: 46px;
+    background-color: #333333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; /*Giúp header nổi lên, ảnh slider sẽ không bị chèn lên khi lăn chuột*/
+}
+
+#nav {
+    display: inline-block; /*Để nhường chỗ cho nút search nhảy lên cùng hàng*/
+    font-family: 'Poppins', sans-serif;
+    
+}
+#nav li {
+    display: inline-block;
+    position: relative;
+}
+
+#nav > li > a {
+    color: #fff;
+    /* text-transform: uppercase; */
+}
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block; /*Mặc định thẻ a là display: inline*/
+  
+}
+#nav .subnav li:hover a, 
+#nav > li:hover > a {
+    color: #000;
+    background-color: #ccc;
+    display: block;
+}
+
+#nav .nav-down {
+    font-size: 13px;
+}
+#nav li:hover .subnav {
+    display: block; /*Ghi đè display:none của #nav .subnav => Khi hover vào More sẽ hiện lớp con lên*/
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    top: 100%;
+    left: 0; /*Ghi hai thuộc tính này sẽ chắc chắn con luôn nằm ở ngay dưới More => sợ một số trình duyệt mặc định không chuẩn*/
+    animation: graduallyAppear ease-in 0.4s;
+}
+
+@keyframes graduallyAppear {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+#nav .subnav a {
+    padding: 0 16px;
+    min-width: 160px;
+    line-height: 38px;
+    color: #000;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+
+#header .mobile-menu-btn,
+#header .header-search {
+    float:right;
+    padding: 0 21px;
+
+}
+
+#header .menu-icon,
+#header .nav-search {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#header .menu-icon:hover {
+    color: #000; 
+}
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;   
+}
+#header .header-search:hover {
+    background-color: #ffa500;
+    cursor: pointer;
+    animation: graduallyAppear ease-in 0.3s;
+}
+
+#video {
+    margin-top: 46px; /*Khi dùng positive: fixed ở header, header sẽ chồng lên slider => margin-top slider xuống*/
+    padding-top: 50%;
+    position: relative;
+}
+
+#video-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#video .video-content {
+    position: absolute;
+    bottom: 47px; /*Đẩy dòng chữ lên cách mặt dưới ảnh 47px*/
+    color: #fff;
+    text-align: center;
+    width: 100%; /*Sẽ căn giữa được */
+    top: 50%;
+    font-family: 'Poppins', sans-serif;
+}
+
+#video .video-topic {
+    font-size: 30px;
+    font-weight: 550;
+    
+}
+
+#video .video-desc {
+    font-size: 18px;
+    margin-top: 25px;
+    font-weight: 500;
+    text-shadow: 0 0 7px #000; /*Giúp phần mô tả dễ nhìn hơn*/
+}
+
+#content {
+    
+}
+
+/* About us */
+#content .content-part {
+    max-width:100%; /*Sử dụng max witdh sẽ mạnh hơn width, thích hợp cho responsive. Có thể viết: max-width: 800px cũng được*/
+    width: 800px;
+    padding: 64px 0 112px 0;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding left-right để bù trừ cho phần margin âm của row, vì khi dùng margin âm đó, lúc responsive sang tablet nó sẽ tạo một khoảng hở 8px ở bên phải */
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#content .content-part-gallery {
+    max-width:100%; /*Sử dụng max witdh sẽ mạnh hơn width, thích hợp cho responsive. Có thể viết: max-width: 800px cũng được*/
+    /* width: 900px; */
+    padding: 64px 0 112px 0;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding left-right để bù trừ cho phần margin âm của row, vì khi dùng margin âm đó, lúc responsive sang tablet nó sẽ tạo một khoảng hở 8px ở bên phải */
+    padding-left: 16px;
+    padding-right: 16px;
+ 
+}
+
+#content .content-heading,
+#content .content-heading-black{
+    text-align: center;
+
+}
+#content .content-heading span {
+    font-size: 24px;
+    background-color: rgba(255, 165, 0, 0.2);
+    color: #ffa500;
+    border-radius: 8px;
+    padding: 2px 16px;
+    
+}
+
+#content .content-heading-black span {
+    font-size: 24px;
+    background-color: rgba(255, 166, 0, 0.694);
+    color: #fff;
+    border-radius: 8px;
+    padding: 2px 16px;
+}
+
+#content .content-heading span.space {
+    background: none;
+}
+#content .content-heading-black span.space {
+    background: none;
+}
+#content .content-subheading {
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+    margin-top: 25px;
+}
+
+#content .content-desc {
+    font-size: 15px;
+    text-align: justify; /*Giúp lề trái và phải các dòng căn đều nhau*/
+    line-height: 1.4; /*Nếu là Vietnamese: 1.6*/
+    margin-top: 25px;
+}
+
+
+#content .member-list {
+    margin-top: 31px;
+}
+
+#content .member-item {
+    text-align: center;
+    float: left;
+    width: calc(100%/3);
+}
+
+/* #content .member-name {
+    margin-top: 15px;
+    font-size: 15px;
+} */
+
+#content .member-img {
+    margin-top: 15px;
+    border-radius: 4px;
+    width: 154px;
+}
+
+/* Tour Dates */
+.tour-parent {
+    background-color: #333333;
+}
+
+.ticket-month {
+    background-color: #fff;
+    margin-top: 40px;
+    list-style-type: none;
+}
+
+.ticket-month li {
+    padding: 8px 16px;
+    border-bottom: solid 1px rgb(221,221,221);
+    color: #757575;
+}
+
+.ticket-month .sold-out {
+    background-image: linear-gradient(to right, #EB4174, #FFE3EE);
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+    border-radius: 5px;
+}
+
+.ticket-month .quantity {
+    float: right;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: #ffa500;
+    color: #fff;
+    text-align: center;
+    line-height: 26px;
+    margin-top: -3px; /*Margin-top chỉ có hiệu dụng khi sử dụng thuộc tính float*/
+}
+
+.tour-place {
+    margin-top: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tour-item {
+    transition: transform ease-in 0.1s;
+    border-radius: 10px;
+}
+.tour-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 1px 0 20px #ccc;
+
+}
+.tour-img {
+    width: 100%; /*Khi float left và đặt width: 33,3% thì ảnh ngoài cùng bên phải không tự co lại theo thẻ cha của nó => dùng width: 100%*/
+    display: block; /*Dính 2 phần tour-img và tour-body sát lại*/
+   
+}
+
+
+.tour-body {
+    background-color: #fff;
+    font-size: 15px; /*Note: Thẻ h không tự điều chỉnh về 15px, nên vẫn phải khai báo thuộc tính này ở thẻ h*/
+    padding: 0 16px 16px 16px;
+}
+
+
+
+.icon-tour {
+    width: 30px;
+    color: #ffa500;
+}
+.tour-heading {
+    font-size: 15px;
+    padding-top: 15px;
+    font-weight: 600;
+}
+
+.tour-date {
+    margin-top: 15px;
+    opacity: 0.7;
+}
+
+.tour-desc {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.tour-price {
+    display: flex;
+}
+
+.tour-price-old {
+    margin-left: 10px;
+    color: #3E3636;
+    text-decoration: line-through;
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tour-price-new {
+    margin-left: 10px;
+    color: #EE4D2D;
+    font-weight: 500;
+    margin-top: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+
+
+/* Contact */
+#contact {
+    font-family: 'Poppins', sans-serif;
+}
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info a {
+    opacity: 0.75;
+}
+
+.contact-info a:hover {
+    opacity: 1;
+}
+
+/* .contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block; /*Khi khai báo width, các icon chưa tự đẩy chữ ra xa vì chúng đang ở display: block*/
+
+/* } */ 
+
+.form-control {
+    padding: 12px;
+    width: 100%;
+    border: solid #333 1px;
+}
+
+
+/* Footer */
+#footer {
+    text-align: center;
+    padding: 64px;
+}
+
+.footer-icon i[class*="ti-"] {
+    font-size: 30px;
+    color: #000;
+    padding: 3px;
+}
+
+.footer-icon i[class*="ti-"]:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+
+.footer-icon a {
+    text-decoration: none;
+}
+
+.footer-desc {
+    margin: 15px 0;
+    
+}
+.footer-desc .quote {
+    font-style: italic;
+    float: right;
+
+}
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center; /*Thẻ con sẽ nằm giữa chiều cao*/
+    justify-content: center; /*Thẻ con sẽ nằm giữa chiều rộng*/
+    animation: modalFadeIn ease 0.6s;
+}
+
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 300px;
+    position: relative;
+}
+
+.modal-header {
+    padding: 42px 16px;
+    background-color: #009688;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 4px;
+    font-weight: 450;
+    font-size: 40px;
+    
+}
+
+.modal-container .ti-close {
+    padding: 18px 15px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.pay-btn:hover,
+.modal-container .ti-close:hover {
+    background-color: #ccc;
+    color: #000!important;
+    font-weight: 550;
+}
+
+.modal-footer,
+.modal-content {
+    padding: 0 16px;
+    margin: 15px 0;
+}
+
+
+.pay-input {
+    width: 100%;
+    margin: 15px 0;
+    padding: 11px 8px;
+    border: 1px solid #ccc!important;
+}
+
+.pay-btn{
+    width: 100%;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    padding: 16px;
+    cursor: pointer;
+
+}
+
+.modal-label {
+    display: block; /*Input sẽ xuống dòng*/
+}
+.modal-content .ti-check {
+    font-weight: 600;
+}
+
+.modal-footer a {
+    color: #2196F3;
+}
+
+.modal.open {
+    display: flex;
+}
+
+/* Tạo chuyển động mượt mà */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

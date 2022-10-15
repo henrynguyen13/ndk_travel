@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDK Travel</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/tour-icon-page.webp"> 
+    <link rel="stylesheet" href="./assets/css/style.css"> 
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css">
+    
+    <!-- Đặt file responsive dưới file style thì nó mới có độ ưu tiên cao hơn  -->
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <!-- Begin: Nav -->
+            <ul id="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#service">About Us</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">More
+                    <i class="nav-down ti-angle-down"></i>
+                </a>
+                    <ul class="subnav">
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- End: Nav -->
+
+            <div class="header-search">
+                <i class="nav-search ti-search"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+        </div>
+
+        <div id="video">
+            <video id="video-full" src="./assets/img/video.mp4" loop autoplay muted></video>
+            <div class="video-content">
+                <h2 class="video-topic">ADVENTURE IS WORLDWIDE</h2>
+                <div class="video-desc">Discover New Places With Us, Adventure Awaits</div>
+            </div>
+        </div>
+
+        <div id="content">
+            <!-- About us -->
+            <div id = "services" class="content-part">
+                <h2 class="content-heading">
+                    <span>A</span>
+                    <span>B</span>
+                    <span>O</span>
+                    <span>U</span>
+                    <span>T</span>
+                    <span class="space"></span>
+                    <span>U</span>
+                    <span>S</span>
+                </h2>
+                <p class="content-subheading">Our services</p>
+                <p class="content-desc">
+                    NDK Travel is proud to be the first travel company to deploy tours across 5 continents in Vietnam and establish a strategic partner system in most countries around the world. With prestige and experience in organizing, Vietravel not only specializes in Asian tours but also all routes across 5 continents. With a strategic goal, vision to 2030, NDK Travel will become the first multinational travel company in Vietnam. With the mission on NDK Travel is gradually realizing with specific strategies and constantly bringing visitors attractive benefits, professional services, diverse products and the best customer care policy.
+                </p>
+
+                <div class="member-list row">
+                    <div class="col-third col text-center s-col-full mt-16">
+                        <img src="./assets/img/content/front-view-woman-smiling-holding-airplane-ticket.jpg" alt="Name" class="member-img">
+                    </div>
+
+                    <div class="col-third col text-center s-col-full mt-16">
+                        <img src="./assets/img/content/about_us.png" alt="Name" class="member-img">
+                    </div>
+
+                    <div class="col-third col text-center s-col-full mt-16">
+                        <img src="./assets/img/content/travel.jpg" alt="Name" class="member-img">
+                    </div>
+
+                    
+                </div>
+            </div>
+
+            <!-- Tour Dates -->
+            <div id="tour" class="tour-parent">
+                <div class="content-part">
+                    <h2 class="content-heading-black">
+                        <span>T</span>
+                        <span>O</span>
+                        <span>U</span>
+                        <span>R</span>
+                        <span class="space"></span>
+                        <span>D</span>
+                        <span>A</span>
+                        <span>T</span>
+                        <span>E</span>
+                        <span>S</span>
+                    </h2>
+                    <p class="content-subheading text-white">Remember to book your tickets!</p>
+
+                    <ul class="ticket-month">
+                        <li>September <span class="sold-out">Sold out</span></li>
+                        <li>October <span class="sold-out">Sold out</span></li>
+                        <li>November <span class="quantity">37</span></li>
+                    </ul>
+                    <div class="row tour-place">
+                        <div class="col col-half s-col-full mt-16 tour-item pb-16">
+                            <img class="tour-img" src="./assets/img/tour/mumbai.jpg" alt="Mumbai">
+                            <div class="tour-body">
+                                <h3 class="tour-heading"> <i class="icon-tour fa-solid fa-location-dot"></i> Mumbai</h3>
+                                <p class="tour-date">3-5 Nov 2022</p>
+                                <p class="tour-desc">Mumbai, formerly known as Bombay, is the capital of the state of Maharashtra and is the most populous city in India.</p>
+                                 <div class="tour-price">
+                                    <div class="tour-price-old">$290.00</div>
+                                    <div class="tour-price-new">$177.00</div>
+                                </div>
+                                <button class="s-full-width btn js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+    
+                        <div class="col col-half s-col-full mt-16 tour-item pb-16">
+                            <img class="tour-img" src="./assets/img/tour/hawaii.jpg" alt="Hawaii">
+                            <div class="tour-body">
+                                <h3 class="tour-heading"> <i class="icon-tour fa-solid fa-location-dot"></i> Hawaii</h3>
+                                <p class="tour-date">5-7 Nov 2022</p>
+                                <p class="tour-desc">Hawaii is an American state located entirely on the Hawaiian Islands, located in the Pacific Ocean.</p>
+                                 <div class="tour-price">
+                                    <div class="tour-price-old">$290.00</div>
+                                    <div class="tour-price-new">$177.00</div>
+                                </div>
+                                <button class="s-full-width btn js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+    
+                        <div class="col col-half s-col-full mt-16 tour-item pb-16">
+                            <img class="tour-img" src="./assets/img/tour/Yamanashi.jpg" alt="Yamanashi">
+                            <div class="tour-body">
+                                <h3 class="tour-heading"> <i class="icon-tour fa-solid fa-location-dot"></i> Yamanashi</h3>
+                                <p class="tour-date">6-8 Nov 2022</p>
+                                <p class="tour-desc">Yamanashi is a prefecture of Japan in the Chubu region, on the island of Honshu. The capital is the city of Kōfu.</p>
+                                 <div class="tour-price">
+                                    <div class="tour-price-old">$290.00</div>
+                                    <div class="tour-price-new">$177.00</div>
+                                </div>
+                                <button class="s-full-width btn js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        <div class="col col-half s-col-full mt-16 tour-item pb-16">
+                            <img class="tour-img" src="./assets/img/tour/bali.jpg" alt="Bali">
+                            <div class="tour-body">
+                                <h3 class="tour-heading"> <i class="icon-tour fa-solid fa-location-dot"></i> Bali</h3>
+                                <p class="tour-date">11-14 Nov 2022</p>
+                                <p class="tour-desc">Bali is a province of Indonesia. The province consists of the main island of Bali and a few neighboring islets.</p>
+                                 <div class="tour-price">
+                                    <div class="tour-price-old">$290.00</div>
+                                    <div class="tour-price-new">$177.00</div>
+                                </div>
+                                <button class="s-full-width btn js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        <div class="col col-half s-col-full mt-16 tour-item pb-16">
+                            <img class="tour-img" src="./assets/img/tour/jeju.jpg" alt="Jeju">
+                            <div class="tour-body">
+                                <h3 class="tour-heading"> <i class="icon-tour fa-solid fa-location-dot"></i> Jeju</h3>
+                                <p class="tour-date">13-15 Nov 2022</p>
+                                <p class="tour-desc">Jeju City is the capital of Jeju Island Province in South Korea and also the largest city on Jeju Island.</p>
+                                 <div class="tour-price">
+                                    <div class="tour-price-old">$290.00</div>
+                                    <div class="tour-price-new">$177.00</div>
+                                </div>
+                                <button class="s-full-width btn js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+                        <div class="col col-half s-col-full mt-16 tour-item pb-16">
+                            <img class="tour-img" src="./assets/img/tour/bangkok.jpg" alt="Bangkok">
+                            <div class="tour-body">
+                                <h3 class="tour-heading"> <i class="icon-tour fa-solid fa-location-dot"></i> Bangkok</h3>
+                                <p class="tour-date">17-18 Nov 2022</p>
+                                <p class="tour-desc">Bangkok is the capital and most populous city of Thailand. Bangkok has an area of 1568.7 km².</p>
+                                 <div class="tour-price">
+                                    <div class="tour-price-old">$290.00</div>
+                                    <div class="tour-price-new">$177.00</div>
+                                </div>
+                                <button class="s-full-width btn js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        <div class="col col-half s-col-full mt-16 tour-item pb-16">
+                            <img class="tour-img" src="./assets/img/tour/london.jpg" alt="London">
+                            <div class="tour-body">
+                                <h3 class="tour-heading"> <i class="icon-tour fa-solid fa-location-dot"></i> London</h3>
+                                <p class="tour-date">22-24 Nov 2022</p>
+                                <p class="tour-desc">London is the capital and largest city of Great Britain and of both Great Britain and Northern Ireland.</p>
+                                 <div class="tour-price">
+                                    <div class="tour-price-old">$290.00</div>
+                                    <div class="tour-price-new">$177.00</div>
+                                </div>
+                                <button class="s-full-width btn js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        <div class="col col-half s-col-full mt-16 tour-item pb-16">
+                            <img class="tour-img" src="./assets/img/tour/paris.jpg" alt="Paris">
+                            <div class="tour-body">
+                                <h3 class="tour-heading"> <i class="icon-tour fa-solid fa-location-dot"></i> Paris</h3>
+                                <p class="tour-date">27-29 Nov 2022</p>
+                                <p class="tour-desc">Paris is the capital and most populous city of France, as well as one of the three fastest growing economic cities in the world.</p>
+                                <div class="tour-price">
+                                    <div class="tour-price-old">$290.00</div>
+                                    <div class="tour-price-new">$177.00</div>
+                                </div>
+
+                                <button class="s-full-width btn js-buy-ticket">Buy Tickets</button>
+                            </div>
+                        </div>
+
+                        
+
+                        
+                    </div>
+                </div>
+                    
+            </div>
+
+            <!-- Contact -->
+            <div id="contact" class="content-part">
+                <h2 class="content-heading">
+                    <span>c</span>
+                    <span>O</span>
+                    <span>N</span>
+                    <span>T</span>
+                    <span>A</span>
+                    <span>C</span>
+                    <span>T</span>
+                </h2>
+                <p class="content-subheading">Please contact us via: </p>
+                
+                <div class="row mt-47">
+                    <div class="s-full-width col col-half contact-info">
+                        <p> <i class="icon-tour fa-solid fa-location-dot"></i> Hanoi, Vietnam</p>
+                        <p><i class="icon-tour fa-solid fa-phone"></i> Phone: <a href="tel:+84 978014692">+84 978014692</a></p>
+                        <p><i class="icon-tour fa-solid fa-envelope"></i> Email: <a href="mailto:emtrailincoln@gmail.com">emtrailincoln@gmail.com</a></p>
+                    </div>
+                    <div class="col col-half s-full-width">
+                        <form action="" > 
+                            <!-- Phải bao quanh input bằng thẻ form thì mới required yêu cầu nhập được  -->
+                            <div class="row">
+                                <div class="col col-half s-full-width s-mt-16 "> 
+                                    <input type="text" placeholder="Name" name="" id="" class="br-4 form-control" required>
+                                </div>
+                                <div class="col col-half s-full-width s-mt-8 ">
+                                    <input type="email" placeholder="Email" name="" id="" class="br-4 form-control" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-full mt-8 ">
+                                    <input type="text" placeholder="Message" name="" id="" class="br-4 form-control" required>
+                                    <input type="submit" value="SEND" class="br-4 btn mt-16 pull-right s-full-width">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            
+            </div>
+
+            <!-- Gallery -->
+            <div id = "gallery" class="content-part-gallery tour-parent">
+                <h2 class="content-heading-black">
+                    <span>G</span>
+                    <span>A</span>
+                    <span>L</span>
+                    <span>L</span>
+                    <span>E</span>
+                    <span>R</span>
+                    <span>Y</span>
+                </h2>
+                <p class="content-subheading text-white">Storing great moments</p>
+                <div class="row mt-16">
+                    <div class="col col-third s-col-full mt-16 tour-item pb-16">
+                        <img class ="gallery-img" src="./assets/img/gallery/gallery6.jpg" alt="">
+                    </div>
+                    <div class="col col-third s-col-full mt-16 tour-item pb-16">
+                        <img class ="gallery-img" src="./assets/img/gallery/gallery5.jpg" alt="">
+                    </div>
+                    <div class="col col-third s-col-full mt-16 tour-item pb-16">
+                        <img class ="gallery-img" src="./assets/img/gallery/gallery8.jpg" alt="">
+                    </div>
+                    <div class="col col-third s-col-full mt-16 tour-item pb-16">
+                        <img class ="gallery-img" src="./assets/img/gallery/gallery4.jpg" alt="">
+                    </div>
+                    <div class="col col-third s-col-full mt-16 tour-item pb-16">
+                        <img class ="gallery-img" src="./assets/img/gallery/gallery3.jpg" alt="">
+                    </div>
+                    <div class="col col-third s-col-full mt-16 tour-item pb-16">
+                        <img class ="gallery-img" src="./assets/img/gallery/gallery2.jpg" alt="">
+                    </div>
+                   
+                </div>
+
+                
+            </div>
+
+        </div>
+        <div id="footer">
+            <div class="footer-icon">   
+                <a href="https://www.facebook.com/bincoln13/" target="_blank"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/ndk1301/" target="_blank"><i class="ti-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UChqJvoQilbLeqUin3LMNJQg" target="_blank"><i class="ti-youtube"></i></a>
+                <a href="https://github.com/henrynguyen13" target="_blank"><i class="ti-github"></i></a>
+            </div>
+            <p class="footer-desc"><i class="quote">"Customer satisfaction is the pride of our company."</i></p>
+        </div>
+
+    </div>
+
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="ti-close js-modal-close"></div>
+            <header class="modal-header">
+                <i class="ti-bag"></i>
+                Tickets
+            </header>
+
+            <div class="modal-content">
+                <label class="modal-label" for="pay-quantity"><i class="ti-shopping-cart-full"></i> Tickets, $15 per person</label>
+                <input class="pay-input" id="pay-quantity" type="text" placeholder="How many?">
+                <!-- Khi viết id="pay-quantity", sau đó cho for của label bằng id tương tự, thì khi ấn chuột vào label, nó tự động hướng người dùng đến input cần điền -->
+                <label class="modal-label" for="pay-email"><i class="ti-user"></i> Send To</label>
+                <input class="pay-input" id="pay-email" type="email" placeholder="Enter email">
+                <button class="pay-btn" type="button">PAY <i class="ti-check"></i></button>
+            </div>
+
+            <footer class="modal-footer pull-right">
+                <p>Need <a href="">help?</a></p>
+            </footer>
+
+
+
+        </div>
+    </div>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const modalClose = document.querySelector('.js-modal-close')
+        const modalContainer =  document.querySelector('.js-modal-container')
+        //Hàm hiển thị modal mua vé (thêm class open vào modal)
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+         //Hàm ẩn modal mua vé (gỡ bỏ class open của modal)
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
+
+        //Lặp qua từng thẻ button và nghe hành vi click
+        for (const buyBtn of buyBtns) {
+            // Khi ấn click vào buyBtn thì hàm showBuyTickets sẽ được gọi
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        //Nghe hành vi click vào button close
+        modalClose.addEventListener('click', hideBuyTickets)
+        
+        //Click vào modal sẽ mất đi
+        modal.addEventListener('click',hideBuyTickets)
+        
+        //Khi click vào thẻ con, nó sẽ vẫn nổi bọt và không bị mất đi
+        modalContainer.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
+
+        // Responsive Mobile
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+        // Đóng, mở mobile nemu
+        mobileMenu.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if(isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+
+            }
+        }
+
+        //Tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for(var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            //Nếu có anh chị em liền kề và anh chị em liền kề đó có class subnav
+            
+            menuItem.onclick = function(event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if(isParentMenu) {
+                    //Nếu là parent menu => bỏ hành vi mặc định
+                    event.preventDefault();
+                } else {
+                    //Nếu không => bỏ menu đi
+                    header.style.height = null;
+                }
+            }
+        }
+    </script>
+
+
+</body>
+</html>

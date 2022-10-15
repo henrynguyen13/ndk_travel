@@ -1,0 +1,109 @@
+/* PC */
+/* @media (min-width: 64em) {
+    .pc {
+        display: block;
+    }
+} */
+
+/* Tablet */
+/* Dùng em cho media query để không bị lỗi trên nhiều trình duyệt khác nhau */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    /* .tablet {
+        display: block;
+    } */
+    #nav .subnav a {
+        padding: 4px 16px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 46.1875em) {
+    .s-full-width,
+    .s-col-full {
+        width: 100%;
+    }
+
+    .s-mt-8 {
+        margin-top: 8px !important; 
+    }
+
+    .s-mt-16 {
+        margin-top: 16px !important;
+    }
+
+    #content .content-heading span {
+        font-size: 20px;
+        padding: 2px 12px;
+        
+    }
+
+    #content .content-heading-black span {
+        font-size: 20px;
+        padding: 2px 10px;
+    }
+    #header {
+        overflow: hidden;
+         /*Thuộc tính con khi nằm ngoài phạm vi thuộc tính cha, sẽ bị ẩn đi*/
+    }
+    #header .header-search {
+        display: none;
+    }
+    #header .mobile-menu-btn {
+        display: block;
+    }
+    #nav {
+        display: block;
+    }
+    #nav li {
+        display: block;
+    }
+
+    #nav li a {
+        padding: 1px 24px;
+    }
+    #nav > li:first-child {
+        /* Thẻ home chỉ cần inline block */
+        display: inline-block;
+    }
+
+    #nav .subnav  {
+        position: initial;
+        background-color: #000;
+    }
+
+    #nav .subnav a {
+        color: #fff;
+        padding: 5px 41px; /*5px cho dễ bấm*/
+    }
+
+    #content .member-img {
+        width: 60%; /*chiều rộng ảnh bằng 60% chiều rộng màn hình*/
+    }
+}
+
+/* Tablet && Mobile*/
+@media (max-width: 63.9375em) {
+    .btn {
+        padding: 16px 20px;
+    }
+
+    .form-control {
+        padding: 15px;
+    }
+
+    .footer-icon i[class*="ti-"] {
+        font-size: 48px;
+        color: #000;
+        padding: 8px;
+    }
+
+    .footer-desc {
+        margin: 25px 0;
+        font-size: 20px;
+    }
+
+    .contact-info {
+        line-height: 2;
+    }
+}
